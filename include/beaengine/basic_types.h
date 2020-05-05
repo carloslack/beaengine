@@ -25,8 +25,8 @@
 
 #include <stddef.h>
 
-#if defined(__GNUC__) || defined (__INTEL_COMPILER) || defined(__LCC__) || defined(__POCC__)
-#include <stdint.h>
+#if defined(__GNUC__) || defined (__INTEL_COMPILER) || defined(__LCC__)
+//#include <stdint.h>
 #endif
 
 #if defined(_MSC_VER) && !defined(__BORLANDC__)
@@ -81,8 +81,8 @@
 	typedef unsigned short         UInt16;
 	typedef signed int             Int32;
 	typedef unsigned int           UInt32;
-	typedef intptr_t               IntPtr;
-	typedef uintptr_t              UIntPtr;
+	typedef long	               IntPtr;
+	typedef u64 		       UIntPtr;
 	#if defined(__LP64__)
 		#define BEA_PTR_IS_64_BIT 1
 		#define BEA_LONG_IS_64_BIT 1
