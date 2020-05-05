@@ -29,7 +29,7 @@ void __bea_callspec__ G3_Eb(PDISASM pMyDisasm)
            (void) strcpy ((*pMyDisasm).Instruction.Mnemonic, "test ");
         #endif
         EbIb(pMyDisasm);
-        (*pMyDisasm).Operand1.AccessMode = READ;
+        (*pMyDisasm).Operand1.AccessMode = __READ;
         FillFlags(pMyDisasm, 104);
     }
     else if (GV.REGOPCODE == 1) {
@@ -38,7 +38,7 @@ void __bea_callspec__ G3_Eb(PDISASM pMyDisasm)
            (void) strcpy ((*pMyDisasm).Instruction.Mnemonic, "test ");
         #endif
         EbIb(pMyDisasm);
-        (*pMyDisasm).Operand1.AccessMode = READ;
+        (*pMyDisasm).Operand1.AccessMode = __READ;
         FillFlags(pMyDisasm, 104);
     }
     else if (GV.REGOPCODE == 2) {
@@ -137,7 +137,7 @@ void __bea_callspec__ G3_Ev(PDISASM pMyDisasm)
            (void) strcpy ((*pMyDisasm).Instruction.Mnemonic, "test ");
         #endif
         EvIv(pMyDisasm);
-        (*pMyDisasm).Operand1.AccessMode = READ;
+        (*pMyDisasm).Operand1.AccessMode = __READ;
         FillFlags(pMyDisasm, 104);
     }
     else if (GV.REGOPCODE == 1) {
@@ -146,7 +146,7 @@ void __bea_callspec__ G3_Ev(PDISASM pMyDisasm)
            (void) strcpy ((*pMyDisasm).Instruction.Mnemonic, "test ");
         #endif
         EvIv(pMyDisasm);
-        (*pMyDisasm).Operand1.AccessMode = READ;
+        (*pMyDisasm).Operand1.AccessMode = __READ;
         FillFlags(pMyDisasm, 104);
     }
     else if (GV.REGOPCODE == 2) {

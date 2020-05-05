@@ -326,8 +326,8 @@ uses Windows,SysUtils;
        RELATIVE_ = $4000000;
        ABSOLUTE_ = $8000000;
 
-       READ = $1;
-       WRITE = $2;
+       __READ = $1;
+       __WRITE = $2;
 
        REG0 = $1;
        REG1 = $2;

@@ -94,7 +94,7 @@ void __bea_callspec__ G15_(PDISASM pMyDisasm)
       GV.MemDecoration = (GV.REX.W_ == 1) ? Arg1qword : Arg1dword;
       GV.OperandSize = (GV.REX.W_ == 1) ? 64 : 32;
       MOD_RM(&(*pMyDisasm).Operand1, pMyDisasm);
-      (*pMyDisasm).Operand1.AccessMode = READ;
+      (*pMyDisasm).Operand1.AccessMode = __READ;
     }
     else if (GV.REGOPCODE == 5) {
       (*pMyDisasm).Instruction.Category = CET_INSTRUCTION;

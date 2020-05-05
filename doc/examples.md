@@ -253,8 +253,8 @@ void DisassembleCode(char *start_offset, char *end_offset, int (*virtual_address
             xxxxx.gpr & REG0 means RAX is used
           */
           if (
-            ((infos.Operand1.AccessMode == WRITE) && (infos.Operand1.Registers.gpr & REG0)) ||
-            ((infos.Operand2.AccessMode == WRITE) && (infos.Operand2.Registers.gpr & REG0)) ||
+            ((infos.Operand1.AccessMode == __WRITE) && (infos.Operand1.Registers.gpr & REG0)) ||
+            ((infos.Operand2.AccessMode == __WRITE) && (infos.Operand2.Registers.gpr & REG0)) ||
             (infos.Instruction.ImplicitModifiedRegs.gpr & REG0)
             ) {
             (void) printf("%.16llx %s\n", infos.VirtualAddr, &infos.CompleteInstr);

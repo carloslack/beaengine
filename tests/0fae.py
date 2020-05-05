@@ -144,7 +144,7 @@ class TestSuite:
         assert_equal(myDisasm.infos.Instruction.Opcode, 0xfae)
         assert_equal(myDisasm.infos.Instruction.Mnemonic, 'ptwrite ')
         assert_equal(myDisasm.infos.repr, 'ptwrite qword ptr [rax]')
-        assert_equal(myDisasm.infos.Operand1.AccessMode, READ)
+        assert_equal(myDisasm.infos.Operand1.AccessMode, __READ)
 
         # F3 0F AE /4
         # PTWRITE r32/m32
@@ -155,7 +155,7 @@ class TestSuite:
         assert_equal(myDisasm.infos.Instruction.Opcode, 0xfae)
         assert_equal(myDisasm.infos.Instruction.Mnemonic, 'ptwrite ')
         assert_equal(myDisasm.infos.repr, 'ptwrite dword ptr [rax]')
-        assert_equal(myDisasm.infos.Operand1.AccessMode, READ)
+        assert_equal(myDisasm.infos.Operand1.AccessMode, __READ)
 
         # 66 0F AE /6
         # CLWB m8

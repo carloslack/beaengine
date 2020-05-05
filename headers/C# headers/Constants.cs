@@ -164,8 +164,8 @@ namespace Bea
       RELATIVE_ = 0x4000000,
       ABSOLUTE_ = 0x8000000,
 
-      READ = 0x1,
-      WRITE = 0x2,
+      __READ = 0x1,
+      __WRITE = 0x2,
 
       REG0 = 0x1,
       REG1 = 0x2,

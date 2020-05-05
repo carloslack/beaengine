@@ -141,7 +141,7 @@ struct OPTYPE {
     - CONSTANT_TYPE+ABSOLUTE_
     - CONSTANT_TYPE+RELATIVE_
  - **OpSize** : *[out]* This field sends back the size of the operand.
- - **AccessMode** : *[out]* This field indicates if the operand is modified or not (READ=0x1) or (WRITE=0x2).
+ - **AccessMode** : *[out]* This field indicates if the operand is modified or not (READ=0x1) or (__WRITE=0x2).
  - **Memory** : *[out]* Structure [MEMORYTYPE](#7-memory-infos) , filled only if infos.Operandxx.OpType == MEMORY_TYPE.
  - **Registers** : *[out]* Structure [REGISTERTYPE](#8-registers-infos) , filled only if infos.Operandxx.OpType == REGISTER_TYPE.
  - **SegmentReg** : *[out]* This field indicates, in the case of memory addressing mode, the segment register used :

@@ -19,13 +19,13 @@
  *    You should have received a copy of the GNU Lesser General Public License
  *    along with BeaEngine.  If not, see <http://www.gnu.org/licenses/>. */
 
+/*
 //#include <stdio.h>
 //#include <stdlib.h>
 //#include <string.h>
-
-//FIXME
-#include "../include/beaengine/BeaEngine.h"
-
+*/
+/*FIXME*/
+#include "BeaEngine.h"
 #include "Includes/protos.h"
 #include "Includes/internal_datas.h"
 #include "Includes/instr_set/Data_opcode.h"

@@ -52,7 +52,7 @@
        if (GV.VEX.state == InUsePrefix) { FailDecode(pMyDisasm); return; }
        (*pMyDisasm).Instruction.Category = GENERAL_PURPOSE_INSTRUCTION+FLAG_CONTROL_INSTRUCTION;
        (*pMyDisasm).Operand1.OpType = REGISTER_TYPE;
-       (*pMyDisasm).Operand1.AccessMode = WRITE;
+       (*pMyDisasm).Operand1.AccessMode = __WRITE;
        (*pMyDisasm).Operand1.Registers.type = SPECIAL_REG;
        (*pMyDisasm).Operand1.Registers.special = REG0;
        #ifndef BEA_LIGHT_DISASSEMBLY

@@ -23,7 +23,8 @@
 #ifndef __BEA_BASIC_TYPES_HPP__
 #define __BEA_BASIC_TYPES_HPP__
 
-#include <stddef.h>
+/*#include <stddef.h>*/
+/*#include <linux/types.h>*/
 
 #if defined(__GNUC__) || defined (__INTEL_COMPILER) || defined(__LCC__)
 //#include <stdint.h>

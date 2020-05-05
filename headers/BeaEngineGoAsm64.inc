@@ -300,8 +300,8 @@ _Disasm ENDS
     RELATIVE_                   equ 04000000h
     ABSOLUTE_                   equ 08000000h
 
-    READ                        equ 1
-    WRITE                       equ 2
+    __READ                        equ 1
+    __WRITE                       equ 2
     ; ************ Regs
 
     REG0                        equ 1   ; 30h

@@ -60,7 +60,7 @@ void __bea_callspec__ CompleteInstructionFields (PDISASM pMyDisasm)
   if (
     ((*pMyDisasm).Instruction.BranchType == JmpType) ||
     ((*pMyDisasm).Instruction.BranchType == CallType)) {
-    (*pMyDisasm).Operand1.AccessMode = READ;
+    (*pMyDisasm).Operand1.AccessMode = __READ;
   }
   if ((*pMyDisasm).Prefix.LockPrefix == InvalidPrefix) {
     GV.ERROR_OPCODE = UD_;
@@ -123,7 +123,7 @@ int __bea_callspec__ InitVariables (PDISASM pMyDisasm)
   (void) memset (&(*pMyDisasm).Operand3, 0, sizeof (OPTYPE));
   (void) memset (&(*pMyDisasm).Operand4, 0, sizeof (OPTYPE));
   (void) memset (&(*pMyDisasm).Prefix, 0, sizeof (PREFIXINFO));
-  (*pMyDisasm).Operand1.AccessMode = WRITE;
+  (*pMyDisasm).Operand1.AccessMode = __WRITE;
   (*pMyDisasm).Operand1.OpPosition = LowPosition;
   (*pMyDisasm).Operand2.OpPosition = LowPosition;
   (*pMyDisasm).Operand3.OpPosition = LowPosition;
@@ -132,9 +132,9 @@ int __bea_callspec__ InitVariables (PDISASM pMyDisasm)
   (*pMyDisasm).Operand2.OpType = NO_ARGUMENT;
   (*pMyDisasm).Operand3.OpType = NO_ARGUMENT;
   (*pMyDisasm).Operand4.OpType = NO_ARGUMENT;
-  (*pMyDisasm).Operand2.AccessMode = READ;
-  (*pMyDisasm).Operand3.AccessMode = READ;
-  (*pMyDisasm).Operand4.AccessMode = READ;
+  (*pMyDisasm).Operand2.AccessMode = __READ;
+  (*pMyDisasm).Operand3.AccessMode = __READ;
+  (*pMyDisasm).Operand4.AccessMode = __READ;
   (void) memset (&(*pMyDisasm).Instruction, 0, sizeof (INSTRTYPE));
   GV.OPTIONS = (UInt32)(*pMyDisasm).Options;
   GV.SYNTAX_ = (UInt32)(*pMyDisasm).Options & 0xff00;

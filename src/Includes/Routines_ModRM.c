@@ -533,7 +533,7 @@ void __bea_callspec__ Addr_EDI(OPTYPE* pMyOperand, PDISASM pMyDisasm)
 
 long __bea_callspec__ getDisp8N(PDISASM pMyDisasm)
 {
-  long N;
+  long N = 0L;
   switch (GV.EVEX.tupletype) {
     case FULL:
       if (GV.EVEX.b == 0) {

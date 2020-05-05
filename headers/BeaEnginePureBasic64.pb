@@ -296,7 +296,7 @@ Global MyDisasm._Disasm
 #ABSOLUTE_                   = $08000000
 
 #Read                        = 1
-#WRITE                       = 2
+#__WRITE                       = 2
 ; ************ Regs
 #REG0                        = 1   ; 30h
 #REG1                        = 2   ; 31h
