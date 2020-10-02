@@ -358,7 +358,7 @@ void __bea_callspec__ Addr_SIB(OPTYPE* pMyOperand, PDISASM pMyDisasm)
     GV.BASE_  = ((UInt8) *((UInt8*) (UIntPtr) (GV.EIP_+2))) & 0x7;
     GV.SCALE_  = (((UInt8) *((UInt8*) (UIntPtr)(GV.EIP_+2))) & 0xc0) >> 6;
     GV.INDEX_  = (((UInt8) *((UInt8*) (UIntPtr)(GV.EIP_+2))) & 0x38) >> 3;
-    (void) SIB[GV.SCALE_ ](pMyOperand, 0, pMyDisasm);
+    (void) SIB_MEMORY[GV.SCALE_ ](pMyOperand, 0, pMyDisasm);
     if (GV.BASE_ == 4) {
       i = strlen ((char*) &(*pMyOperand).OpMnemonic);
       i = printDisp8(pMyOperand, i, pMyDisasm, 0);
@@ -863,7 +863,7 @@ void __bea_callspec__ Addr_SIB_disp8(OPTYPE* pMyOperand, PDISASM pMyDisasm)
         GV.SCALE_  = ((*((UInt8*)(UIntPtr) (GV.EIP_+2))) & 0xc0) >> 6;
         GV.INDEX_  = ((*((UInt8*)(UIntPtr) (GV.EIP_+2))) & 0x38) >> 3;
         j = i;
-        i += SIB[GV.SCALE_ ](pMyOperand, j, pMyDisasm);
+        i += SIB_MEMORY[GV.SCALE_ ](pMyOperand, j, pMyDisasm);
     }
     else {
         #ifndef BEA_LIGHT_DISASSEMBLY
@@ -1168,7 +1168,7 @@ void __bea_callspec__ Addr_SIB_disp32(OPTYPE* pMyOperand, PDISASM pMyDisasm)
         GV.SCALE_  = (((UInt8) *((UInt8*) (UIntPtr)GV.EIP_+2)) & 0xc0) >> 6;
         GV.INDEX_  = (((UInt8) *((UInt8*) (UIntPtr)GV.EIP_+2)) & 0x38) >> 3;
         j = i;
-        i += SIB[GV.SCALE_ ](pMyOperand, j, pMyDisasm);
+        i += SIB_MEMORY[GV.SCALE_ ](pMyOperand, j, pMyDisasm);
     }
     else {
         #ifndef BEA_LIGHT_DISASSEMBLY

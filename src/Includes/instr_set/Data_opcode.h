@@ -166,7 +166,7 @@ void (__bea_callspec__ *ModRM_0[])(OPTYPE*, PDISASM) = {
      _rEDI,
  };
 
-size_t (__bea_callspec__ *SIB[])(OPTYPE*, size_t, PDISASM) = {
+size_t (__bea_callspec__ *SIB_MEMORY[])(OPTYPE*, size_t, PDISASM) = {
      SIB_0,
      SIB_1,
      SIB_2,

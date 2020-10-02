@@ -24,7 +24,6 @@
 //#include <stdlib.h>
 //#include <string.h>
 */
-/*FIXME*/
 #include "BeaEngine.h"
 #include "Includes/protos.h"
 #include "Includes/internal_datas.h"
